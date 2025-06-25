@@ -1,0 +1,5682 @@
+<?xml version="1.0" encoding="iso-8859-1"?><DocumentData>
+<ProductVersion>8.1.0.0</ProductVersion>
+<ProductID>{ABF9EF9E-ECF6-4019-8A3E-908A6CFF4D1A}</ProductID>
+<IRProductName>AutoPlay Media Studio 8</IRProductName>
+<ProductType>Commercial</ProductType>
+<DocInfo>
+<Title/>
+<Author/>
+<Company/>
+<Copyright>Copyright © 2025</Copyright>
+<URL/>
+<Email/>
+<Comments/>
+<CreatedVersion>8.1.0.0 (Professional Edition Commercial)</CreatedVersion>
+<LastSavedVersion>8.1.0.0 (Professional Edition Commercial)</LastSavedVersion>
+</DocInfo>
+<ProjectInfo ToolTipStyle="0">
+<Office2007Theme Theme="5"/>
+<WindowStyles>
+<Width>1024</Width>
+<Height>750</Height>
+<WindowTitle>Historia de la criptografia</WindowTitle>
+<WindowStyle>0</WindowStyle>
+<FillColor>0</FillColor>
+</WindowStyles>
+<WindowOptions>
+<Movable>1</Movable>
+<AlwaysOnTop>0</AlwaysOnTop>
+<Resizable>0</Resizable>
+<MinWidth>790</MinWidth>
+<MinHeight>545</MinHeight>
+</WindowOptions>
+<TransparentWindow>
+<TransparentImage/>
+<FitTrans>1</FitTrans>
+</TransparentWindow>
+<Icon>
+<UseCustomIcon>1</UseCustomIcon>
+<TaskbarVisibility>0</TaskbarVisibility>
+<IconFile>AutoPlay\Icons\Frame 8.ico</IconFile>
+</Icon>
+<IntroVideo>
+<AllowClickToSkip>1</AllowClickToSkip>
+<MediaWidth>630</MediaWidth>
+<MediaHeight>425</MediaHeight>
+<WindowWidth>630</WindowWidth>
+<WindowHeight>425</WindowHeight>
+<BackgroundColor>16777215</BackgroundColor>
+<MediaMode>1</MediaMode>
+<WindowMode>0</WindowMode>
+<VideoFileName/>
+<UseIntroVideo>0</UseIntroVideo>
+<VideoType>0</VideoType>
+<UseBorder>0</UseBorder>
+<TitleBar>0</TitleBar>
+<TitleBarText/>
+</IntroVideo>
+<AudioBGMusic>
+<ShuffleMode>0</ShuffleMode>
+<Repeat>1</Repeat>
+<BackVolume>255</BackVolume>
+<EffectsVolume>255</EffectsVolume>
+<Tracks/>
+</AudioBGMusic>
+<Globals>
+<Script>
+
+-- Función de Navegación Principal
+-- Se ejecuta cuando el usuario hace clic en un nodo del árbol.
+function SetJump()
+	-- Asegúrate de que tu objeto Árbol se llame "MiArbol"
+	local e_NodeIndex = Tree.GetSelectedNode("MiArbol");
+
+	-- ### SECCIÓN 1.0 - INTRODUCCIÓN ###
+	if e_NodeIndex == "1.0" then Page.Jump("Intro_Principals"); end
+	if e_NodeIndex == "1.1" then Page.Jump("Intro_QueEsCripto"); end
+	if e_NodeIndex == "1.2" then Page.Jump("Intro_Conceptos"); end
+	if e_NodeIndex == "1.3" then Page.Jump("Intro_CriptoVsEstegano"); end
+	if e_NodeIndex == "1.4" then Page.Jump("Intro_LineaDeTiempo"); end
+	if e_NodeIndex == "1.5" then Page.Jump("Intro_Importancia"); end
+
+	-- ### SECCIÓN 2.0 - CRIPTOGRAFÍA ANTIGUA ###
+	if e_NodeIndex == "2.0" then Page.Jump("Antigua_Principal"); end
+	if e_NodeIndex == "2.1" then Page.Jump("Antigua_MesopotamiaEgipto"); end
+	if e_NodeIndex == "2.2" then Page.Jump("Antigua_Escitala"); end
+	if e_NodeIndex == "2.3" then Page.Jump("Antigua_Polibio"); end
+	if e_NodeIndex == "2.4" then Page.Jump("Antigua_Atbash"); end
+	if e_NodeIndex == "2.5" then Page.Jump("Antigua_Cesar_Principal"); end
+	if e_NodeIndex == "2.5.1" then Page.Jump("Antigua_Cesar_Funciona"); end
+	if e_NodeIndex == "2.5.2" then Page.Jump("Antigua_Cesar_Debilidades"); end
+	if e_NodeIndex == "2.6" then Page.Jump("Antigua_Esteganografia"); end
+	if e_NodeIndex == "2.7" then Page.Jump("Antigua_Kamasutra"); end
+
+	-- ### SECCIÓN 3.0 - MEDIEVAL Y RENACENTISTA ###
+	if e_NodeIndex == "3.0" then Page.Jump("Medieval_Principal"); end
+	if e_NodeIndex == "3.1" then Page.Jump("Medieval_AlKindi"); end
+	if e_NodeIndex == "3.2" then Page.Jump("Medieval_SustitucionMono"); end
+	if e_NodeIndex == "3.3" then Page.Jump("Medieval_DiscoAlberti"); end
+	if e_NodeIndex == "3.4" then Page.Jump("Medieval_TabulaRecta"); end
+	if e_NodeIndex == "3.5" then Page.Jump("Medieval_Vigenere_Principal"); end
+	if e_NodeIndex == "3.5.1" then Page.Jump("Medieval_Vigenere_Funciona"); end
+	if e_NodeIndex == "3.5.2" then Page.Jump("Medieval_Vigenere_Seguridad"); end
+	if e_NodeIndex == "3.5.3" then Page.Jump("Medieval_Vigenere_Kasiski"); end
+	if e_NodeIndex == "3.6" then Page.Jump("Medieval_Nomenclator"); end
+	if e_NodeIndex == "3.7" then Page.Jump("Medieval_MariaEscocia"); end
+
+	-- ### SECCIÓN 4.0 - DE LA PLUMA A LA MÁQUINA ###
+	if e_NodeIndex == "4.0" then Page.Jump("Maquina_Principal"); end
+	if e_NodeIndex == "4.1" then Page.Jump("Maquina_GranCifrado"); end
+	if e_NodeIndex == "4.2" then Page.Jump("Maquina_Playfair"); end
+	if e_NodeIndex == "4.3" then Page.Jump("Maquina_Hill"); end
+	if e_NodeIndex == "4.4" then Page.Jump("Maquina_Telegraficos"); end
+	if e_NodeIndex == "4.5" then Page.Jump("Maquina_Zimmermann_Principal"); end
+	if e_NodeIndex == "4.5.1" then Page.Jump("Maquina_Zimmermann_Codigo"); end
+	if e_NodeIndex == "4.5.2" then Page.Jump("Maquina_Zimmermann_Impacto"); end
+
+	-- ### SECCIÓN 5.0 - ERA DE LAS MÁQUINAS (WWII) ###
+	if e_NodeIndex == "5.0" then Page.Jump("WWII_Principal"); end
+	if e_NodeIndex == "5.1" then Page.Jump("WWII_Enigma_Principal"); end
+	if e_NodeIndex == "5.1.1" then Page.Jump("WWII_Enigma_Historia"); end
+	if e_NodeIndex == "5.1.2" then Page.Jump("WWII_Enigma_Componentes"); end
+	if e_NodeIndex == "5.1.3" then Page.Jump("WWII_Enigma_Funciona"); end
+	if e_NodeIndex == "5.1.4" then Page.Jump("WWII_Enigma_Debilidades"); end
+	if e_NodeIndex == "5.2" then Page.Jump("WWII_Bletchley_Principal"); end
+	if e_NodeIndex == "5.2.1" then Page.Jump("WWII_Bletchley_Rejewski"); end
+	if e_NodeIndex == "5.2.2" then Page.Jump("WWII_Bletchley_Turing"); end
+	if e_NodeIndex == "5.2.3" then Page.Jump("WWII_Bletchley_Cribas"); end
+	if e_NodeIndex == "5.2.4" then Page.Jump("WWII_Bletchley_Impacto"); end
+	if e_NodeIndex == "5.3" then Page.Jump("WWII_Lorenz"); end
+    if e_NodeIndex == "5.3.1" then Page.Jump("WWII_Lorenz_Colossus"); end -- Asumiendo que esta página existe
+	if e_NodeIndex == "5.4" then Page.Jump("WWII_Purpura"); end
+    if e_NodeIndex == "5.4.1" then Page.Jump("WWII_Purpura_Friedman"); end -- Asumiendo que esta página existe
+	if e_NodeIndex == "5.5" then Page.Jump("WWII_Sigaba"); end
+
+	-- ### SECCIÓN 6.0 - CRIPTOGRAFÍA MODERNA ###
+	if e_NodeIndex == "6.0" then Page.Jump("Moderna_Principal"); end
+	if e_NodeIndex == "6.1" then Page.Jump("Moderna_Shannon_Principal"); end
+	if e_NodeIndex == "6.1.1" then Page.Jump("Moderna_Shannon_Conceptos"); end
+	if e_NodeIndex == "6.2" then Page.Jump("Moderna_Simetrica_Principal"); end
+	if e_NodeIndex == "6.2.1" then Page.Jump("Moderna_Simetrica_DES"); end
+	if e_NodeIndex == "6.2.2" then Page.Jump("Moderna_Simetrica_3DES"); end
+	if e_NodeIndex == "6.2.3" then Page.Jump("Moderna_Simetrica_AES"); end
+	if e_NodeIndex == "6.2.4" then Page.Jump("Moderna_Simetrica_Modos"); end
+	if e_NodeIndex == "6.2.5" then Page.Jump("Moderna_Simetrica_Flujo"); end
+	if e_NodeIndex == "6.3" then Page.Jump("Moderna_Asimetrica_Principal"); end
+	if e_NodeIndex == "6.3.1" then Page.Jump("Moderna_Asimetrica_Problema"); end
+	if e_NodeIndex == "6.3.2" then Page.Jump("Moderna_Asimetrica_DiffieHellman"); end
+	if e_NodeIndex == "6.3.3" then Page.Jump("Moderna_Asimetrica_RSA"); end
+	if e_NodeIndex == "6.3.4" then Page.Jump("Moderna_Asimetrica_Firmas"); end
+	if e_NodeIndex == "6.3.5" then Page.Jump("Moderna_Asimetrica_ECC"); end
+	if e_NodeIndex == "6.3.6" then Page.Jump("Moderna_Asimetrica_PKI"); end
+	if e_NodeIndex == "6.4" then Page.Jump("Moderna_Hash_Principal"); end
+	if e_NodeIndex == "6.4.1" then Page.Jump("Moderna_Hash_Propiedades"); end
+	if e_NodeIndex == "6.4.2" then Page.Jump("Moderna_Hash_SHA"); end
+	if e_NodeIndex == "6.5" then Page.Jump("Moderna_Aplicaciones_Principal"); end
+	if e_NodeIndex == "6.5.1" then Page.Jump("Moderna_Aplicaciones_HTTPS"); end
+	if e_NodeIndex == "6.5.2" then Page.Jump("Moderna_Aplicaciones_WiFi"); end
+	if e_NodeIndex == "6.5.3" then Page.Jump("Moderna_Aplicaciones_Blockchain"); end
+	if e_NodeIndex == "6.5.4" then Page.Jump("Moderna_Aplicaciones_E2E"); end
+	if e_NodeIndex == "6.5.5" then Page.Jump("Moderna_Aplicaciones_Disco"); end
+
+	-- ### SECCIÓN 7.0 - FRONTERAS (FUTURO CUÁNTICO) ###
+	if e_NodeIndex == "7.0" then Page.Jump("Futuro_Principal"); end
+	if e_NodeIndex == "7.1" then Page.Jump("Futuro_Amenaza"); end
+	if e_NodeIndex == "7.2" then Page.Jump("Futuro_Shor"); end
+	if e_NodeIndex == "7.3" then Page.Jump("Futuro_PQC"); end
+	if e_NodeIndex == "7.4" then Page.Jump("Futuro_QKD"); end
+
+	-- ### SECCIÓN 8.0 - PERSONAJES CLAVE ###
+	if e_NodeIndex == "8.0" then Page.Jump("Personajes_Principal"); end
+	if e_NodeIndex == "8.1" then Page.Jump("Personajes_Cesar"); end
+	if e_NodeIndex == "8.2" then Page.Jump("Personajes_AlKindi"); end
+	if e_NodeIndex == "8.3" then Page.Jump("Personajes_Alberti"); end
+	if e_NodeIndex == "8.4" then Page.Jump("Personajes_Babbage"); end
+	if e_NodeIndex == "8.5" then Page.Jump("Personajes_Kerckhoffs"); end
+	if e_NodeIndex == "8.6" then Page.Jump("Personajes_Turing"); end
+	if e_NodeIndex == "8.7" then Page.Jump("Personajes_Shannon"); end
+	if e_NodeIndex == "8.8" then Page.Jump("Personajes_DiffieHellman"); end
+	if e_NodeIndex == "8.9" then Page.Jump("Personajes_RSA"); end
+
+	-- ### SECCIÓN 9.0 - EXTRAS Y RECURSOS ###
+	if e_NodeIndex == "9.0" then Page.Jump("Extras_Principal"); end
+	if e_NodeIndex == "9.1" then Page.Jump("Extras_Glosario"); end
+	if e_NodeIndex == "9.2" then Page.Jump("Extras_Puzzles"); end
+	if e_NodeIndex == "9.3" then Page.Jump("Extras_Recursos"); end
+
+	-- ### SECCIÓN 10.0 - SALIR ###
+	if e_NodeIndex == "10.0" then
+		Application.Exit();
+	end
+end
+
+-- Función para Resaltar la Página Actual en el Árbol
+-- Esta función debería llamarse en el evento "On Show" de CADA página.
+function SetSelectedPage()
+    local sPage = Application.GetCurrentPage();
+    
+    -- Deseleccionamos todo para un estado limpio
+    Tree.DeselectAll("MiArbol", true);
+
+    -- Buscamos la página actual y seleccionamos el nodo correspondiente.
+    -- Sí, este es el bloque de código masivo que anticipamos. ¡Cada página necesita su "elseif"!
+    -- Es la forma más directa de asegurar que el árbol siempre refleje dónde estamos.
+    
+    -- ### SECCIÓN 1.0 - INTRODUCCIÓN ###
+    if sPage == "Intro_Principal" then Tree.SetSelectedNode("MiArbol", "1.0", true);
+    elseif sPage == "Intro_QueEsCripto" then Tree.SetSelectedNode("MiArbol", "1.1", true);
+    elseif sPage == "Intro_Conceptos" then Tree.SetSelectedNode("MiArbol", "1.2", true);
+    elseif sPage == "Intro_CriptoVsEstegano" then Tree.SetSelectedNode("MiArbol", "1.3", true);
+    elseif sPage == "Intro_LineaDeTiempo" then Tree.SetSelectedNode("MiArbol", "1.4", true);
+    elseif sPage == "Intro_Importancia" then Tree.SetSelectedNode("MiArbol", "1.5", true);
+
+    -- ### SECCIÓN 2.0 - CRIPTOGRAFÍA ANTIGUA ###
+    elseif sPage == "Antigua_Principal" then Tree.SetSelectedNode("MiArbol", "2.0", true);
+    elseif sPage == "Antigua_MesopotamiaEgipto" then Tree.SetSelectedNode("MiArbol", "2.1", true);
+    elseif sPage == "Antigua_Escitala" then Tree.SetSelectedNode("MiArbol", "2.2", true);
+    elseif sPage == "Antigua_Polibio" then Tree.SetSelectedNode("MiArbol", "2.3", true);
+    elseif sPage == "Antigua_Atbash" then Tree.SetSelectedNode("MiArbol", "2.4", true);
+    elseif sPage == "Antigua_Cesar_Principal" then Tree.SetSelectedNode("MiArbol", "2.5", true);
+    elseif sPage == "Antigua_Cesar_Funciona" then Tree.SetSelectedNode("MiArbol", "2.5.1", true);
+    elseif sPage == "Antigua_Cesar_Debilidades" then Tree.SetSelectedNode("MiArbol", "2.5.2", true);
+    elseif sPage == "Antigua_Esteganografia" then Tree.SetSelectedNode("MiArbol", "2.6", true);
+    elseif sPage == "Antigua_Kamasutra" then Tree.SetSelectedNode("MiArbol", "2.7", true);
+
+    -- ### SECCIÓN 3.0 - MEDIEVAL Y RENACENTISTA ###
+    elseif sPage == "Medieval_Principal" then Tree.SetSelectedNode("MiArbol", "3.0", true);
+    elseif sPage == "Medieval_AlKindi" then Tree.SetSelectedNode("MiArbol", "3.1", true);
+    elseif sPage == "Medieval_SustitucionMono" then Tree.SetSelectedNode("MiArbol", "3.2", true);
+    elseif sPage == "Medieval_DiscoAlberti" then Tree.SetSelectedNode("MiArbol", "3.3", true);
+    elseif sPage == "Medieval_TabulaRecta" then Tree.SetSelectedNode("MiArbol", "3.4", true);
+    elseif sPage == "Medieval_Vigenere_Principal" then Tree.SetSelectedNode("MiArbol", "3.5", true);
+    elseif sPage == "Medieval_Vigenere_Funciona" then Tree.SetSelectedNode("MiArbol", "3.5.1", true);
+    elseif sPage == "Medieval_Vigenere_Seguridad" then Tree.SetSelectedNode("MiArbol", "3.5.2", true);
+    elseif sPage == "Medieval_Vigenere_Kasiski" then Tree.SetSelectedNode("MiArbol", "3.5.3", true);
+    elseif sPage == "Medieval_Nomenclator" then Tree.SetSelectedNode("MiArbol", "3.6", true);
+    elseif sPage == "Medieval_MariaEscocia" then Tree.SetSelectedNode("MiArbol", "3.7", true);
+
+    -- ### SECCIÓN 4.0 - DE LA PLUMA A LA MÁQUINA ###
+    elseif sPage == "Maquina_Principal" then Tree.SetSelectedNode("MiArbol", "4.0", true);
+    elseif sPage == "Maquina_GranCifrado" then Tree.SetSelectedNode("MiArbol", "4.1", true);
+    elseif sPage == "Maquina_Playfair" then Tree.SetSelectedNode("MiArbol", "4.2", true);
+    elseif sPage == "Maquina_Hill" then Tree.SetSelectedNode("MiArbol", "4.3", true);
+    elseif sPage == "Maquina_Telegraficos" then Tree.SetSelectedNode("MiArbol", "4.4", true);
+    elseif sPage == "Maquina_Zimmermann_Principal" then Tree.SetSelectedNode("MiArbol", "4.5", true);
+    elseif sPage == "Maquina_Zimmermann_Codigo" then Tree.SetSelectedNode("MiArbol", "4.5.1", true);
+    elseif sPage == "Maquina_Zimmermann_Impacto" then Tree.SetSelectedNode("MiArbol", "4.5.2", true);
+
+    -- ### SECCIÓN 5.0 - ERA DE LAS MÁQUINAS (WWII) ###
+    elseif sPage == "WWII_Principal" then Tree.SetSelectedNode("MiArbol", "5.0", true);
+    elseif sPage == "WWII_Enigma_Principal" then Tree.SetSelectedNode("MiArbol", "5.1", true);
+    elseif sPage == "WWII_Enigma_Historia" then Tree.SetSelectedNode("MiArbol", "5.1.1", true);
+    elseif sPage == "WWII_Enigma_Componentes" then Tree.SetSelectedNode("MiArbol", "5.1.2", true);
+    elseif sPage == "WWII_Enigma_Funciona" then Tree.SetSelectedNode("MiArbol", "5.1.3", true);
+    elseif sPage == "WWII_Enigma_Debilidades" then Tree.SetSelectedNode("MiArbol", "5.1.4", true);
+    elseif sPage == "WWII_Bletchley_Principal" then Tree.SetSelectedNode("MiArbol", "5.2", true);
+    elseif sPage == "WWII_Bletchley_Rejewski" then Tree.SetSelectedNode("MiArbol", "5.2.1", true);
+    elseif sPage == "WWII_Bletchley_Turing" then Tree.SetSelectedNode("MiArbol", "5.2.2", true);
+    elseif sPage == "WWII_Bletchley_Cribas" then Tree.SetSelectedNode("MiArbol", "5.2.3", true);
+    elseif sPage == "WWII_Bletchley_Impacto" then Tree.SetSelectedNode("MiArbol", "5.2.4", true);
+    elseif sPage == "WWII_Lorenz" or sPage == "WWII_Lorenz_Colossus" then Tree.SetSelectedNode("MiArbol", "5.3", true);
+    elseif sPage == "WWII_Purpura" or sPage == "WWII_Purpura_Friedman" then Tree.SetSelectedNode("MiArbol", "5.4", true);
+    elseif sPage == "WWII_Sigaba" then Tree.SetSelectedNode("MiArbol", "5.5", true);
+
+    -- ### SECCIÓN 6.0 - CRIPTOGRAFÍA MODERNA ###
+    elseif sPage == "Moderna_Principal" then Tree.SetSelectedNode("MiArbol", "6.0", true);
+    elseif sPage == "Moderna_Shannon_Principal" then Tree.SetSelectedNode("MiArbol", "6.1", true);
+    elseif sPage == "Moderna_Shannon_Conceptos" then Tree.SetSelectedNode("MiArbol", "6.1.1", true);
+    elseif sPage == "Moderna_Simetrica_Principal" then Tree.SetSelectedNode("MiArbol", "6.2", true);
+    elseif sPage == "Moderna_Simetrica_DES" then Tree.SetSelectedNode("MiArbol", "6.2.1", true);
+    elseif sPage == "Moderna_Simetrica_3DES" then Tree.SetSelectedNode("MiArbol", "6.2.2", true);
+    elseif sPage == "Moderna_Simetrica_AES" then Tree.SetSelectedNode("MiArbol", "6.2.3", true);
+    elseif sPage == "Moderna_Simetrica_Modos" then Tree.SetSelectedNode("MiArbol", "6.2.4", true);
+    elseif sPage == "Moderna_Simetrica_Flujo" then Tree.SetSelectedNode("MiArbol", "6.2.5", true);
+    elseif sPage == "Moderna_Asimetrica_Principal" then Tree.SetSelectedNode("MiArbol", "6.3", true);
+    elseif sPage == "Moderna_Asimetrica_Problema" then Tree.SetSelectedNode("MiArbol", "6.3.1", true);
+    elseif sPage == "Moderna_Asimetrica_DiffieHellman" then Tree.SetSelectedNode("MiArbol", "6.3.2", true);
+    elseif sPage == "Moderna_Asimetrica_RSA" then Tree.SetSelectedNode("MiArbol", "6.3.3", true);
+    elseif sPage == "Moderna_Asimetrica_Firmas" then Tree.SetSelectedNode("MiArbol", "6.3.4", true);
+    elseif sPage == "Moderna_Asimetrica_ECC" then Tree.SetSelectedNode("MiArbol", "6.3.5", true);
+    elseif sPage == "Moderna_Asimetrica_PKI" then Tree.SetSelectedNode("MiArbol", "6.3.6", true);
+    elseif sPage == "Moderna_Hash_Principal" then Tree.SetSelectedNode("MiArbol", "6.4", true);
+    elseif sPage == "Moderna_Hash_Propiedades" then Tree.SetSelectedNode("MiArbol", "6.4.1", true);
+    elseif sPage == "Moderna_Hash_SHA" then Tree.SetSelectedNode("MiArbol", "6.4.2", true);
+    elseif sPage == "Moderna_Aplicaciones_Principal" then Tree.SetSelectedNode("MiArbol", "6.5", true);
+    elseif sPage == "Moderna_Aplicaciones_HTTPS" then Tree.SetSelectedNode("MiArbol", "6.5.1", true);
+    elseif sPage == "Moderna_Aplicaciones_WiFi" then Tree.SetSelectedNode("MiArbol", "6.5.2", true);
+    elseif sPage == "Moderna_Aplicaciones_Blockchain" then Tree.SetSelectedNode("MiArbol", "6.5.3", true);
+    elseif sPage == "Moderna_Aplicaciones_E2E" then Tree.SetSelectedNode("MiArbol", "6.5.4", true);
+    elseif sPage == "Moderna_Aplicaciones_Disco" then Tree.SetSelectedNode("MiArbol", "6.5.5", true);
+
+    -- ### SECCIÓN 7.0 - FRONTERAS (FUTURO CUÁNTICO) ###
+    elseif sPage == "Futuro_Principal" then Tree.SetSelectedNode("MiArbol", "7.0", true);
+    elseif sPage == "Futuro_Amenaza" then Tree.SetSelectedNode("MiArbol", "7.1", true);
+    elseif sPage == "Futuro_Shor" then Tree.SetSelectedNode("MiArbol", "7.2", true);
+    elseif sPage == "Futuro_PQC" then Tree.SetSelectedNode("MiArbol", "7.3", true);
+    elseif sPage == "Futuro_QKD" then Tree.SetSelectedNode("MiArbol", "7.4", true);
+
+    -- ### SECCIÓN 8.0 - PERSONAJES CLAVE ###
+    elseif sPage == "Personajes_Principal" then Tree.SetSelectedNode("MiArbol", "8.0", true);
+    elseif sPage == "Personajes_Cesar" then Tree.SetSelectedNode("MiArbol", "8.1", true);
+    elseif sPage == "Personajes_AlKindi" then Tree.SetSelectedNode("MiArbol", "8.2", true);
+    elseif sPage == "Personajes_Alberti" then Tree.SetSelectedNode("MiArbol", "8.3", true);
+    elseif sPage == "Personajes_Babbage" then Tree.SetSelectedNode("MiArbol", "8.4", true);
+    elseif sPage == "Personajes_Kerckhoffs" then Tree.SetSelectedNode("MiArbol", "8.5", true);
+    elseif sPage == "Personajes_Turing" then Tree.SetSelectedNode("MiArbol", "8.6", true);
+    elseif sPage == "Personajes_Shannon" then Tree.SetSelectedNode("MiArbol", "8.7", true);
+    elseif sPage == "Personajes_DiffieHellman" then Tree.SetSelectedNode("MiArbol", "8.8", true);
+    elseif sPage == "Personajes_RSA" then Tree.SetSelectedNode("MiArbol", "8.9", true);
+
+    -- ### SECCIÓN 9.0 - EXTRAS Y RECURSOS ###
+    elseif sPage == "Extras_Principal" then Tree.SetSelectedNode("MiArbol", "9.0", true);
+    elseif sPage == "Extras_Glosario" then Tree.SetSelectedNode("MiArbol", "9.1", true);
+    elseif sPage == "Extras_Puzzles" then Tree.SetSelectedNode("MiArbol", "9.2", true);
+    elseif sPage == "Extras_Recursos" then Tree.SetSelectedNode("MiArbol", "9.3", true);
+    end
+end</Script>
+<BookMarks count="0">
+</BookMarks>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+</Globals>
+<Defaults>
+<StartupPage>_PageFirst</StartupPage>
+<MouseOverSoundDefault>AutoPlay\Audio\High1.ogg</MouseOverSoundDefault>
+<MouseClickSoundDefault>AutoPlay\Audio\Click1.ogg</MouseClickSoundDefault>
+<MemMngMethod>0</MemMngMethod>
+<UserPrivilegeLevel>0</UserPrivilegeLevel>
+</Defaults>
+<TargetMedia>
+<TargetMediaSize>4</TargetMediaSize>
+<CustomSize>0</CustomSize>
+</TargetMedia>
+<Group>
+<CurrentGrounp>0</CurrentGrounp>
+</Group>
+<ActionPlugins/>
+<TemplateInfo>
+<Name/>
+<Author/>
+<Contact/>
+<Web/>
+<Copyright>Copyright © 2025</Copyright>
+<Desc/>
+<Categories>General</Categories>
+<Picture/>
+</TemplateInfo>
+<ReadOrder>
+<RTLReadOrder>0</RTLReadOrder>
+</ReadOrder>
+<CodeSigning>
+<CodeSignLocation/>
+<CodeSignCertificateFile/>
+<CodeSignPVKFile/>
+<CodeSignTimeStampURL/>
+<CodeSignDescription/>
+<CodeSignDescriptionURL/>
+<CodeSignApps>0</CodeSignApps>
+<CodeSigningTool>0</CodeSigningTool>
+<Arguments/>
+</CodeSigning>
+<RuntimeSkin>
+<UseSkinFile>0</UseSkinFile>
+<SkinFilename/>
+<SkinSubStyle/>
+</RuntimeSkin>
+<Databases>
+<MySQL>0</MySQL>
+<SQLite3>0</SQLite3>
+<Oracle>0</Oracle>
+<ODBC>0</ODBC>
+<PostgreSQL>0</PostgreSQL>
+</Databases>
+<Event>
+<Name>On Startup</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Shutdown</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1852583532</DesignCodeLine>
+<DesignCodeCol>107</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Size</Name>
+<Args>number e_WindowWidth, number e_WindowHeight, number e_PageWidth, number e_PageHeight, number e_Type</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Menu</Name>
+<Args>number e_ID, table e_ItemInfo</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1814968352</DesignCodeLine>
+<DesignCodeCol>27502</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<EXEResourceInfo>
+<ReplaceIcon>1</ReplaceIcon>
+<IconFilename>AutoPlay\Icons\Frame 8.ico</IconFilename>
+<ReplaceVersionInfo>0</ReplaceVersionInfo>
+<FileVer1>1</FileVer1>
+<FileVer2>0</FileVer2>
+<FileVer3>0</FileVer3>
+<FileVer4>0</FileVer4>
+<ProductVer1>1</ProductVer1>
+<ProductVer2>0</ProductVer2>
+<ProductVer3>0</ProductVer3>
+<ProductVer4>0</ProductVer4>
+<Comments>Created with AutoPlay Media Studio</Comments>
+<Company>Indigo Rose Corporation</Company>
+<FileDescription>AutoPlay Application</FileDescription>
+<LegalCopyright>Runtime Engine Copyright © 2012 Indigo Rose Corporation (www.indigorose.com)</LegalCopyright>
+<LegalTrademarks>AutoPlay Media Studio is a Trademark of Indigo Rose Corporation</LegalTrademarks>
+<PrivateBuild/>
+<ProductName>AutoPlay Media Studio Runtime</ProductName>
+<SpecialBuild/>
+</EXEResourceInfo>
+<HGuidelines/>
+<VGuidelines/>
+<MenuBar>
+<Enabled>0</Enabled>
+<UseIcons>0</UseIcons>
+<BitmapIconFile/>
+<TransColor format="hex">ffffff</TransColor>
+<MenuItem>
+<Text>Main Menu &amp;1</Text>
+<ID>100</ID>
+<Enabled>1</Enabled>
+<Checked>0</Checked>
+<SubMenu>
+<MenuItem>
+<Text>Sub Menu &amp;1</Text>
+<ID>101</ID>
+<Enabled>1</Enabled>
+<Checked>0</Checked>
+<SubMenu/>
+<IconID>-1</IconID>
+</MenuItem>
+<MenuItem>
+<Text>Sub Menu &amp;2</Text>
+<ID>102</ID>
+<Enabled>1</Enabled>
+<Checked>0</Checked>
+<SubMenu/>
+<IconID>-1</IconID>
+</MenuItem>
+</SubMenu>
+<IconID>-1</IconID>
+</MenuItem>
+<MenuItem>
+<Text>Main Menu &amp;2</Text>
+<ID>200</ID>
+<Enabled>1</Enabled>
+<Checked>0</Checked>
+<SubMenu>
+<MenuItem>
+<Text>Sub Menu &amp;1</Text>
+<ID>201</ID>
+<Enabled>1</Enabled>
+<Checked>0</Checked>
+<SubMenu/>
+<IconID>-1</IconID>
+</MenuItem>
+<MenuItem>
+<Text>Sub Menu &amp;2</Text>
+<ID>202</ID>
+<Enabled>1</Enabled>
+<Checked>0</Checked>
+<SubMenu/>
+<IconID>-1</IconID>
+</MenuItem>
+</SubMenu>
+<IconID>-1</IconID>
+</MenuItem>
+</MenuBar>
+</ProjectInfo>
+<Page>
+<Name>Intro_Principal</Name>
+<InheritObs/>
+<InheritBG/>
+<Description/>
+<Keywords/>
+<Background>
+<Type>0</Type>
+<ImageStyle>0</ImageStyle>
+<TopColor>16711680</TopColor>
+<BottomColor>13433342</BottomColor>
+<UseCustomBackgroundSettings>1</UseCustomBackgroundSettings>
+<TransitionEffect/>
+<TransProps/>
+<NormalImage>
+<Filename/>
+</NormalImage>
+</Background>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1819042147</DesignCodeLine>
+<DesignCodeCol>1684930681</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Show</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1917845605</DesignCodeLine>
+<DesignCodeCol>1701996399</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Close</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1917870336</DesignCodeLine>
+<DesignCodeCol>779317359</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Timer</Name>
+<Args>number e_ID</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Audio</Name>
+<Args>number e_Channel, string e_State</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1769238639</DesignCodeLine>
+<DesignCodeCol>7564911</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Size</Name>
+<Args>number e_WindowWidth, number e_WindowHeight, number e_PageWidth, number e_PageHeight, number e_Type</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>544538739</DesignCodeLine>
+<DesignCodeCol>7496002</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Menu</Name>
+<Args>number e_ID, table e_ItemInfo</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>6778732</DesignCodeLine>
+<DesignCodeCol>1952737623</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1778414691</DesignCodeLine>
+<DesignCodeCol>7627621</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Button</Name>
+<Args>number e_Type, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1634689648</DesignCodeLine>
+<DesignCodeCol>536896626</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Move</Name>
+<Args>number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1769234787</DesignCodeLine>
+<DesignCodeCol>536899183</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Wheel</Name>
+<Args>table e_Flags, number e_Delta, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Object>
+<Type>4</Type>
+<Name>Flash1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>5</Top>
+<Bottom>229</Bottom>
+<Left>1</Left>
+<Right>1025</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>4.571429</WidthRatio>
+<HeightRatio>0.218750</HeightRatio>
+</Ratios>
+<Event>
+<Name>On FSCommand</Name>
+<Args>string e_FSCommand, string e_FSArgs</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1731097456</DesignCodeLine>
+<DesignCodeCol>26217</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On FlashCall</Name>
+<Args>string e_FlashCall</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1728079726</DesignCodeLine>
+<DesignCodeCol>1929406057</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<FLASH>
+<Filename>AutoPlay\Flash\banner1.swf</Filename>
+<AutoStart>1</AutoStart>
+<Loop>1</Loop>
+<ShowFullMenu>1</ShowFullMenu>
+<UseDeviceFont>0</UseDeviceFont>
+<OverrideBGColor>0</OverrideBGColor>
+<BGColor>13433342</BGColor>
+<Alignment>0</Alignment>
+<Quality>3</Quality>
+<ScalingMode>0</ScalingMode>
+<DTFrameToShow>0</DTFrameToShow>
+<AltMode>1</AltMode>
+<AltImage/>
+</FLASH>
+</Object>
+<Object>
+<Type>4</Type>
+<Name>Flash2</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>229</Top>
+<Bottom>709</Bottom>
+<Left>676</Left>
+<Right>916</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>0.500000</WidthRatio>
+<HeightRatio>2.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On FSCommand</Name>
+<Args>string e_FSCommand, string e_FSArgs</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1063348582</DesignCodeLine>
+<DesignCodeCol>1073744384</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On FlashCall</Name>
+<Args>string e_FlashCall</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>7173224</DesignCodeLine>
+<DesignCodeCol>1936291328</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<FLASH>
+<Filename>AutoPlay\Flash\cesar.swf</Filename>
+<AutoStart>1</AutoStart>
+<Loop>1</Loop>
+<ShowFullMenu>1</ShowFullMenu>
+<UseDeviceFont>0</UseDeviceFont>
+<OverrideBGColor>0</OverrideBGColor>
+<BGColor>16777215</BGColor>
+<Alignment>0</Alignment>
+<Quality>3</Quality>
+<ScalingMode>0</ScalingMode>
+<DTFrameToShow>0</DTFrameToShow>
+<AltMode>1</AltMode>
+<AltImage/>
+</FLASH>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>btnInicio</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip>Iniciar</ToolTip>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>284</Top>
+<Bottom>338</Bottom>
+<Left>385</Left>
+<Right>583</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("Los albores de la escritura secreta");
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1041_0003.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>Iniciar</Caption>
+<Align>1</Align>
+<UpColor>16777215</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Bebas Neue</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>btnManu</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip>Menu</ToolTip>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>358</Top>
+<Bottom>412</Bottom>
+<Left>384</Left>
+<Right>582</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("Intro_Principals");
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1041_0003.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>Menu</Caption>
+<Align>1</Align>
+<UpColor>16777215</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Bebas Neue</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>btnSalir</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip>Salir</ToolTip>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>594</Top>
+<Bottom>648</Bottom>
+<Left>384</Left>
+<Right>582</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions>
+<Action>
+<Type>10</Type>
+<Name>Exit/Close</Name>
+<Exit>0</Exit>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+</Action>
+</Actions>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1040_0002.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>Salir</Caption>
+<Align>1</Align>
+<UpColor>16777215</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Verdana</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>Button1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>523</Top>
+<Bottom>577</Bottom>
+<Left>384</Left>
+<Right>582</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>local url = "https://docs.google.com/document/d/128JNpi6hiM3owalMrAA17sgdmzvRXrwiX7Vx2KV2wyE/edit?usp=sharing";
+File.Open(url);</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1</DesignCodeLine>
+<DesignCodeCol>15</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1042_0003.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>Aprender mas</Caption>
+<Align>1</Align>
+<UpColor>255</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Verdana</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<Object>
+<Type>12</Type>
+<Name>MiArbol</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>101</Top>
+<Bottom>851</Bottom>
+<Left>0</Left>
+<Right>225</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Select</Name>
+<Args>string e_NodeIndex</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Double-Click</Name>
+<Args>string e_NodeIndex</Args>
+<Script>SetJump();</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>10</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Focus</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On EditLabel</Name>
+<Args>string e_NodeIndex, string e_NewText, string e_OldText</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Check</Name>
+<Args>string e_NodeIndex, boolean e_Checked</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Expanded</Name>
+<Args>string e_NodeIndex, boolean e_Expanded</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<ImageList/>
+<BackgroundColor format="hex">fef9cc</BackgroundColor>
+<TextColor format="hex">000000</TextColor>
+<TransparentImageListColor format="hex">ffffff</TransparentImageListColor>
+<ShowCheckBoxes>0</ShowCheckBoxes>
+<HasLines>1</HasLines>
+<LinesAtRoot>1</LinesAtRoot>
+<HasButtons>1</HasButtons>
+<EditLabels>0</EditLabels>
+<AlwaysShowSelection>1</AlwaysShowSelection>
+<UseImageList>0</UseImageList>
+<ReadOrder>0</ReadOrder>
+<Indent>0</Indent>
+<BorderMode>2</BorderMode>
+</Options>
+<Tree>
+<TreeRootCreated>1</TreeRootCreated>
+<tree_node>
+<AMSTreeData>
+<Text>Introducción a la Criptografía</Text>
+<Data>Data for Item 1</Data>
+<Selected>0</Selected>
+<Expanded>1</Expanded>
+<NodeIndex>1</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_children>
+<tree_node>
+<AMSTreeData>
+<Text>¿Qué es la criptografía? (Confidencialidad, Integridad, Autenticación)</Text>
+<Data>Data for Sub Item 1</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>1.1</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>Conceptos básicos: Texto plano, Cifrado, Texto cifrado, Descifrado, Clave</Text>
+<Data>Data for Sub Item 2</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>1.2</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>Criptografía vs. Esteganografía</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>1.3</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>Línea de tiempo interactiva de la Criptografía</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>1.4</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>La importancia de la criptografía a lo largo de la historia</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>1.5</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>0</node_sibling>
+</tree_node>
+</node_children>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>Criptografía Antigua (Hasta ~500 d.C.)</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>2</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_children>
+<tree_node>
+<AMSTreeData>
+<Text>Criptografía en Mesopotamia y Egipto</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>2.1</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>0</node_sibling>
+</tree_node>
+</node_children>
+<node_sibling>0</node_sibling>
+</tree_node>
+</Tree>
+<Font>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-12</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Font>
+</Object>
+<HGuidelines>
+<Guideline>
+<pt>384</pt>
+<locked>0</locked>
+</Guideline>
+</HGuidelines>
+<VGuidelines/>
+</Page>
+<Page>
+<Name>Intro_Principals</Name>
+<InheritObs/>
+<InheritBG/>
+<Description/>
+<Keywords/>
+<Background>
+<Type>0</Type>
+<ImageStyle>0</ImageStyle>
+<TopColor>16711680</TopColor>
+<BottomColor>13433342</BottomColor>
+<UseCustomBackgroundSettings>1</UseCustomBackgroundSettings>
+<TransitionEffect/>
+<TransProps/>
+<NormalImage>
+<Filename/>
+</NormalImage>
+</Background>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Show</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Close</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Timer</Name>
+<Args>number e_ID</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Audio</Name>
+<Args>number e_Channel, string e_State</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Size</Name>
+<Args>number e_WindowWidth, number e_WindowHeight, number e_PageWidth, number e_PageHeight, number e_Type</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Menu</Name>
+<Args>number e_ID, table e_ItemInfo</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Button</Name>
+<Args>number e_Type, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Move</Name>
+<Args>number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Wheel</Name>
+<Args>table e_Flags, number e_Delta, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Object>
+<Type>3</Type>
+<Name>Image1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>0</Top>
+<Bottom>92</Bottom>
+<Left>0</Left>
+<Right>232</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("Intro_Principal");
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<NormalImage>
+<Filename>AutoPlay\Images\MENU-7-4-2025.png</Filename>
+<UseTransColor>0</UseTransColor>
+<TransClr>16777215</TransClr>
+<TransTolerance>10</TransTolerance>
+<Opacity>100</Opacity>
+<HTMode>0</HTMode>
+</NormalImage>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>Button1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>102</Top>
+<Bottom>156</Bottom>
+<Left>39</Left>
+<Right>237</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("Los albores de la escritura secreta");
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1041_0002.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>La era antigua</Caption>
+<Align>1</Align>
+<UpColor>10092543</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Verdana</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>Button2</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>102</Top>
+<Bottom>156</Bottom>
+<Left>257</Left>
+<Right>455</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("La era clásica");
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1041_0002.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>La era clasica</Caption>
+<Align>1</Align>
+<UpColor>10092543</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Verdana</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>Button3</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>102</Top>
+<Bottom>156</Bottom>
+<Left>477</Left>
+<Right>675</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("La Edad Media");
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1041_0002.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>La edad media</Caption>
+<Align>1</Align>
+<UpColor>10092543</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Verdana</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>Button4</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>669</Top>
+<Bottom>723</Bottom>
+<Left>785</Left>
+<Right>983</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("Intro_Principal");
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>19</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1040_0010.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>Salir</Caption>
+<Align>1</Align>
+<UpColor>10092543</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Verdana</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<HGuidelines/>
+<VGuidelines>
+<Guideline>
+<pt>102</pt>
+<locked>0</locked>
+</Guideline>
+</VGuidelines>
+</Page>
+<Page>
+<Name>Los albores de la escritura secreta</Name>
+<InheritObs/>
+<InheritBG/>
+<Description>Los albores de la escritura secreta</Description>
+<Keywords/>
+<Background>
+<Type>0</Type>
+<ImageStyle>0</ImageStyle>
+<TopColor>16711680</TopColor>
+<BottomColor>13433342</BottomColor>
+<UseCustomBackgroundSettings>1</UseCustomBackgroundSettings>
+<TransitionEffect/>
+<TransProps/>
+<NormalImage>
+<Filename/>
+</NormalImage>
+</Background>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>3158064</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Show</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>3158064</DesignCodeLine>
+<DesignCodeCol>1952737623</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Close</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>3158064</DesignCodeLine>
+<DesignCodeCol>1073744384</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Timer</Name>
+<Args>number e_ID</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1684930681</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Audio</Name>
+<Args>number e_Channel, string e_State</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1936291328</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Size</Name>
+<Args>number e_WindowWidth, number e_WindowHeight, number e_PageWidth, number e_PageHeight, number e_Type</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>7627621</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Menu</Name>
+<Args>number e_ID, table e_ItemInfo</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>11822</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1627401774</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Button</Name>
+<Args>number e_Type, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1079500800</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Move</Name>
+<Args>number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1073744384</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Wheel</Name>
+<Args>table e_Flags, number e_Delta, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Object>
+<Type>1</Type>
+<Name>titulo</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>6</Top>
+<Bottom>95</Bottom>
+<Left>85</Left>
+<Right>878</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>4079394</DesignCodeLine>
+<DesignCodeCol>2573</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5832819</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1082506240</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>4079394</DesignCodeLine>
+<DesignCodeCol>7957612</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body>Los albores de la escritura secreta</Body>
+<NormalColor>2302939</NormalColor>
+<HighlightColor>2147483647</HighlightColor>
+<MouseDownColor>2147483647</MouseDownColor>
+<DisabledColor>12632256</DisabledColor>
+<FontData>
+<FontName>Bebas Neue</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-64</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>1</Alignment>
+<Orientation>0</Orientation>
+<AutoSize>1</AutoSize>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+<OriginalRect>
+<Top>6</Top>
+<Bottom>95</Bottom>
+<Left>85</Left>
+<Right>878</Right>
+</OriginalRect>
+</Text>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>Button1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>660</Top>
+<Bottom>714</Bottom>
+<Left>37</Left>
+<Right>235</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("Intro_Principal");
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1042_0005.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>Pagina Anterior</Caption>
+<Align>1</Align>
+<UpColor>255</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Verdana</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>Button2</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>660</Top>
+<Bottom>714</Bottom>
+<Left>795</Left>
+<Right>993</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("La era clásica");
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1042_0004.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>Pagina Siguiente</Caption>
+<Align>1</Align>
+<UpColor>2302939</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Verdana</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>Button3</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>660</Top>
+<Bottom>714</Bottom>
+<Left>412</Left>
+<Right>610</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("Intro_Principal");
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1042_0003.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>Menu Principal</Caption>
+<Align>1</Align>
+<UpColor>2302939</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Verdana</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<Object>
+<Type>3</Type>
+<Name>Image1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>101</Top>
+<Bottom>351</Bottom>
+<Left>605</Left>
+<Right>982</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>97</DesignCodeLine>
+<DesignCodeCol>3678319</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5857125</DesignCodeLine>
+<DesignCodeCol>1082346496</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>3678319</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5857125</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<NormalImage>
+<Filename>AutoPlay\Images\Screenshot 2025-04-07 162518.png</Filename>
+<UseTransColor>0</UseTransColor>
+<TransClr>16777215</TransClr>
+<TransTolerance>10</TransTolerance>
+<Opacity>100</Opacity>
+<HTMode>0</HTMode>
+</NormalImage>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<Object>
+<Type>2</Type>
+<Name>Paragraph1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>100</Top>
+<Bottom>609</Bottom>
+<Left>80</Left>
+<Right>584</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5832704</DesignCodeLine>
+<DesignCodeCol>100</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1634689648</DesignCodeLine>
+<DesignCodeCol>25714</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>909196613</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1918988130</DesignCodeLine>
+<DesignCodeCol>1082523748</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body>Los primeros indicios documentados del uso de la criptografía se sitúan en el antiguo Egipto, alrededor del año 1900 a.C. En la tumba del noble Khnumhotep II, se encontraron inscripciones que utilizaban jeroglíficos no estándar. Estos símbolos inusuales representaban una forma temprana de sustitución de símbolos. Sin embargo, el objetivo principal de estos jeroglíficos atípicos probablemente no era la comunicación secreta en el sentido moderno. Más bien, se cree que su uso respondía a propósitos de misterio, intriga o un intento de conferir mayor dignidad al texto.
+
+No obstante, en la misma época, los monjes egipcios desarrollaron un sistema fotocriptográfico utilizando jeroglíficos no convencionales para mantener la confidencialidad de la información dentro de su círculo interno. Es importante notar que en Egipto coexistían diferentes sistemas de escritura, como la hierática y la demótica, destinadas principalmente a documentos cotidianos y textos religiosos, mientras que los jeroglíficos, aunque con aplicaciones criptográficas, tenían un uso más amplio. Posteriormente, durante el último milenio de existencia de la escritura jeroglífica, se desarrolló una forma de escritura criptográfica con la intención de atraer la atención e invitar al placer de su descifrado.
+
+Un avance significativo en la historia de la criptografía se produjo en Mesopotamia alrededor del año 1500 a.C. Allí se descubrió una tablilla de arcilla que contenía una receta encriptada para un esmalte de cerámica. Este hallazgo se considera el primer ejemplo conocido de criptografía utilizada para proteger información sensible, probablemente un secreto comercial valioso. La técnica empleada fue un cifrado de sustitución básico aplicado a la escritura cuneiforme. A diferencia de los ejemplos egipcios, la motivación aquí parece haber sido la ocultación de conocimiento práctico para obtener una ventaja competitiva.
+
+Aunque no estrictamente criptográficos, también cabe mencionar los sellos cilíndricos utilizados en Mesopotamia para la autenticación y como símbolos de estatus, que representan una forma temprana de seguridad de la información y verificación de identidad.</Body>
+<NormalColor>0</NormalColor>
+<HighlightColor>0</HighlightColor>
+<MouseDownColor>0</MouseDownColor>
+<DisabledColor>12632256</DisabledColor>
+<BorderColor>0</BorderColor>
+<BackColor>16777215</BackColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-16</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<TransBG>1</TransBG>
+<VSMode>0</VSMode>
+<HSMode>2</HSMode>
+<SBStyle>0</SBStyle>
+<SBSkin/>
+<Border>0</Border>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Text>
+</Object>
+<Object>
+<Type>3</Type>
+<Name>Image2</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>370</Top>
+<Bottom>613</Bottom>
+<Left>607</Left>
+<Right>975</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1081485312</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5857125</DesignCodeLine>
+<DesignCodeCol>1082407936</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>97</DesignCodeLine>
+<DesignCodeCol>281</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1081485312</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<NormalImage>
+<Filename>AutoPlay\Images\Screenshot 2025-04-07 162656.png</Filename>
+<UseTransColor>0</UseTransColor>
+<TransClr>16777215</TransClr>
+<TransTolerance>10</TransTolerance>
+<Opacity>100</Opacity>
+<HTMode>0</HTMode>
+</NormalImage>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<HGuidelines/>
+<VGuidelines>
+<Guideline>
+<pt>713</pt>
+<locked>0</locked>
+</Guideline>
+</VGuidelines>
+</Page>
+<Page>
+<Name>La era clásica</Name>
+<InheritObs/>
+<InheritBG/>
+<Description>La era clásica</Description>
+<Keywords/>
+<Background>
+<Type>0</Type>
+<ImageStyle>0</ImageStyle>
+<TopColor>16711680</TopColor>
+<BottomColor>13433342</BottomColor>
+<UseCustomBackgroundSettings>1</UseCustomBackgroundSettings>
+<TransitionEffect/>
+<TransProps/>
+<NormalImage>
+<Filename/>
+</NormalImage>
+</Background>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>3158064</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Show</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>3158064</DesignCodeLine>
+<DesignCodeCol>1952737623</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Close</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>3158064</DesignCodeLine>
+<DesignCodeCol>1073744384</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Timer</Name>
+<Args>number e_ID</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1684930681</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Audio</Name>
+<Args>number e_Channel, string e_State</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1936291328</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Size</Name>
+<Args>number e_WindowWidth, number e_WindowHeight, number e_PageWidth, number e_PageHeight, number e_Type</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>7627621</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Menu</Name>
+<Args>number e_ID, table e_ItemInfo</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>11822</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1627401774</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Button</Name>
+<Args>number e_Type, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1079500800</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Move</Name>
+<Args>number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1073744384</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Wheel</Name>
+<Args>table e_Flags, number e_Delta, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Object>
+<Type>1</Type>
+<Name>titulo</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>6</Top>
+<Bottom>95</Bottom>
+<Left>85</Left>
+<Right>995</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>4079394</DesignCodeLine>
+<DesignCodeCol>2573</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5832819</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1082506240</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>4079394</DesignCodeLine>
+<DesignCodeCol>7957612</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body>Desarrollos en la antigua Grecia y Roma.</Body>
+<NormalColor>2302939</NormalColor>
+<HighlightColor>2147483647</HighlightColor>
+<MouseDownColor>2147483647</MouseDownColor>
+<DisabledColor>12632256</DisabledColor>
+<FontData>
+<FontName>Bebas Neue</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-64</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>1</Alignment>
+<Orientation>0</Orientation>
+<AutoSize>1</AutoSize>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+<OriginalRect>
+<Top>6</Top>
+<Bottom>95</Bottom>
+<Left>85</Left>
+<Right>995</Right>
+</OriginalRect>
+</Text>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>Button1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>660</Top>
+<Bottom>714</Bottom>
+<Left>37</Left>
+<Right>235</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("Los albores de la escritura secreta");
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>17</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1042_0005.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>Pagina Anterior</Caption>
+<Align>1</Align>
+<UpColor>255</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Verdana</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>Button2</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>660</Top>
+<Bottom>714</Bottom>
+<Left>795</Left>
+<Right>993</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("La Edad Media");
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1042_0004.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>Pagina Siguiente</Caption>
+<Align>1</Align>
+<UpColor>2302939</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Verdana</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>Button3</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>660</Top>
+<Bottom>714</Bottom>
+<Left>412</Left>
+<Right>610</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("Intro_Principal");
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>20</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1042_0003.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>Menu Principal</Caption>
+<Align>1</Align>
+<UpColor>2302939</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Verdana</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<Object>
+<Type>3</Type>
+<Name>Image1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>101</Top>
+<Bottom>351</Bottom>
+<Left>605</Left>
+<Right>982</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>97</DesignCodeLine>
+<DesignCodeCol>3678319</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5857125</DesignCodeLine>
+<DesignCodeCol>1082346496</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>3678319</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5857125</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<NormalImage>
+<Filename>AutoPlay\Images\Screenshot 2025-04-07 163533.png</Filename>
+<UseTransColor>0</UseTransColor>
+<TransClr>16777215</TransClr>
+<TransTolerance>10</TransTolerance>
+<Opacity>100</Opacity>
+<HTMode>0</HTMode>
+</NormalImage>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<Object>
+<Type>2</Type>
+<Name>Paragraph1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>100</Top>
+<Bottom>609</Bottom>
+<Left>80</Left>
+<Right>584</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5832704</DesignCodeLine>
+<DesignCodeCol>100</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1634689648</DesignCodeLine>
+<DesignCodeCol>25714</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>909196613</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1918988130</DesignCodeLine>
+<DesignCodeCol>1082523748</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body>Contribuciones Griegas:
+
+La Escítala Espartana (c. Siglo V a.C.): Considerado uno de los primeros dispositivos criptográficos conocidos, la escítala era utilizada prominentemente por los militares espartanos. Consistía en un bastón o cilindro de un diámetro específico alrededor del cual se enrollaba una tira de pergamino o cuero. El mensaje se escribía a lo largo del bastón sobre la tira enrollada. Una vez desenrollada, las letras aparecían desordenadas, formando un cifrado por transposición. Solo alguien con un bastón del mismo diámetro podía enrollar la tira correctamente y leer el mensaje original. Si bien su uso principal se asocia con el cifrado de mensajes militares, existe un debate académico sobre si su función primordial era la confidencialidad (cifrado) o la autenticación (probar que el mensaje provenía de una fuente legítima con una escítala idéntica).
+Métodos Esteganográficos: Los griegos también emplearon técnicas de esteganografía, que buscan ocultar la existencia misma del mensaje, a diferencia de la criptografía que oculta su contenido. Ejemplos notables incluyen:
+Tatuar mensajes en el cuero cabelludo afeitado de un esclavo y esperar a que el cabello creciera para ocultarlo.
+Escribir mensajes en tablillas de madera y luego cubrirlos con cera para que parecieran en blanco.
+El Cuadrado de Polibio (c. Siglo II a.C.): Desarrollado por el historiador Polibio, este sistema es un ejemplo temprano de cifrado por sustitución fraccionada. Organizaba el alfabeto en una cuadrícula (generalmente 5x5) y cada letra era reemplazada por las coordenadas (números de fila y columna) de su posición en la cuadrícula. Este método no solo sustituía letras, sino que las convertía en pares de símbolos (números), un concepto fundamental en desarrollos criptográficos posteriores.
+Eneas el Táctico (Siglo IV a.C.): Su obra "Sobre la defensa de las fortificaciones" es un hito crucial, ya que incluye un capítulo dedicado específicamente a métodos de comunicación secreta. Se considera el primer tratado sistemático conocido sobre criptografía y esteganografía, documentando diversas técnicas y marcando el paso de la práctica aislada al estudio organizado del tema.
+Contribuciones Romanas:
+
+El Cifrado César (c. 100-44 a.C.): Es el método criptográfico más famoso asociado a la antigua Roma, atribuido a Julio César. Se trata de un cifrado por sustitución monoalfabética simple. Consiste en reemplazar cada letra del texto original por otra letra situada un número fijo de posiciones más adelante en el alfabeto.
+Uso Histórico: Historiadores como Suetonio, Casio Dión y Aulo Gelio documentaron que César utilizaba este método (comúnmente con un desplazamiento de tres posiciones) para proteger sus comunicaciones militares y correspondencia privada. Su relativa eficacia en la época se debía, en parte, a los altos índices de analfabetismo.
+Variaciones: Se sabe que otras figuras, como el emperador Augusto, usaron variaciones, por ejemplo, con un desplazamiento de una sola posición.
+Vulnerabilidad: A pesar de su uso histórico, el cifrado César es intrínsecamente débil. Al ser monoalfabético y tener un número muy limitado de claves posibles (25 en el alfabeto latino), es fácilmente vulnerable al criptoanálisis mediante análisis de frecuencias y a ataques de fuerza bruta (probar todas las claves posibles), incluso con técnicas antiguas.
+Legado: No obstante, su simplicidad conceptual ha asegurado su perdurabilidad. Formas modernas como el ROT13 (un cifrado César con desplazamiento fijo de 13) se utilizan todavía en informática, aunque principalmente para ofuscación simple (ocultar spoilers, por ejemplo) y no como medida de seguridad robusta.</Body>
+<NormalColor>0</NormalColor>
+<HighlightColor>0</HighlightColor>
+<MouseDownColor>0</MouseDownColor>
+<DisabledColor>12632256</DisabledColor>
+<BorderColor>0</BorderColor>
+<BackColor>16777215</BackColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-16</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<TransBG>1</TransBG>
+<VSMode>0</VSMode>
+<HSMode>2</HSMode>
+<SBStyle>0</SBStyle>
+<SBSkin/>
+<Border>0</Border>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Text>
+</Object>
+<Object>
+<Type>3</Type>
+<Name>Image2</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>370</Top>
+<Bottom>613</Bottom>
+<Left>607</Left>
+<Right>975</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1081485312</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5857125</DesignCodeLine>
+<DesignCodeCol>1082407936</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>97</DesignCodeLine>
+<DesignCodeCol>281</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1081485312</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<NormalImage>
+<Filename>AutoPlay\Images\Screenshot 2025-04-07 163641.png</Filename>
+<UseTransColor>0</UseTransColor>
+<TransClr>16777215</TransClr>
+<TransTolerance>10</TransTolerance>
+<Opacity>100</Opacity>
+<HTMode>0</HTMode>
+</NormalImage>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<HGuidelines/>
+<VGuidelines>
+<Guideline>
+<pt>713</pt>
+<locked>0</locked>
+</Guideline>
+</VGuidelines>
+</Page>
+<Page>
+<Name>La Edad Media</Name>
+<InheritObs/>
+<InheritBG/>
+<Description>La Edad Media: contribuciones árabes y el amanecer del criptoanálisis. </Description>
+<Keywords/>
+<Background>
+<Type>0</Type>
+<ImageStyle>0</ImageStyle>
+<TopColor>16711680</TopColor>
+<BottomColor>13433342</BottomColor>
+<UseCustomBackgroundSettings>1</UseCustomBackgroundSettings>
+<TransitionEffect/>
+<TransProps/>
+<NormalImage>
+<Filename/>
+</NormalImage>
+</Background>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>3158064</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Show</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>3158064</DesignCodeLine>
+<DesignCodeCol>1952737623</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Close</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>3158064</DesignCodeLine>
+<DesignCodeCol>1073744384</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Timer</Name>
+<Args>number e_ID</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1684930681</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Audio</Name>
+<Args>number e_Channel, string e_State</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1936291328</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Size</Name>
+<Args>number e_WindowWidth, number e_WindowHeight, number e_PageWidth, number e_PageHeight, number e_Type</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>7627621</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Menu</Name>
+<Args>number e_ID, table e_ItemInfo</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>11822</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1627401774</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Button</Name>
+<Args>number e_Type, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1079500800</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Move</Name>
+<Args>number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1073744384</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Wheel</Name>
+<Args>table e_Flags, number e_Delta, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Object>
+<Type>1</Type>
+<Name>titulo</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>0</Top>
+<Bottom>89</Bottom>
+<Left>215</Left>
+<Right>718</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>4079394</DesignCodeLine>
+<DesignCodeCol>2573</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5832819</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1082506240</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>4079394</DesignCodeLine>
+<DesignCodeCol>7957612</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body>Contribuciones árabes</Body>
+<NormalColor>2302939</NormalColor>
+<HighlightColor>2147483647</HighlightColor>
+<MouseDownColor>2147483647</MouseDownColor>
+<DisabledColor>12632256</DisabledColor>
+<FontData>
+<FontName>Bebas Neue</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-64</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>1</Alignment>
+<Orientation>0</Orientation>
+<AutoSize>1</AutoSize>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+<OriginalRect>
+<Top>0</Top>
+<Bottom>89</Bottom>
+<Left>215</Left>
+<Right>718</Right>
+</OriginalRect>
+</Text>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>Button1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>660</Top>
+<Bottom>714</Bottom>
+<Left>37</Left>
+<Right>235</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("La era clásica");
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>28</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1042_0005.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>Pagina Anterior</Caption>
+<Align>1</Align>
+<UpColor>255</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Verdana</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>Button2</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>660</Top>
+<Bottom>714</Bottom>
+<Left>795</Left>
+<Right>993</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1082500096</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>7563118</DesignCodeLine>
+<DesignCodeCol>10</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1634689648</DesignCodeLine>
+<DesignCodeCol>25714</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1635020399</DesignCodeLine>
+<DesignCodeCol>7957612</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1042_0004.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>Pagina Siguiente</Caption>
+<Align>1</Align>
+<UpColor>2302939</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Verdana</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<Object>
+<Type>0</Type>
+<Name>Button3</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>1</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>660</Top>
+<Bottom>714</Bottom>
+<Left>412</Left>
+<Right>610</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script>Page.Jump("Intro_Principal");
+</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<BUTTON>
+<Filename>AutoPlay\Buttons\1042_0003.btn</Filename>
+<Style>0</Style>
+<State>0</State>
+<Caption>Menu Principal</Caption>
+<Align>1</Align>
+<UpColor>2302939</UpColor>
+<HighlightColor>16777215</HighlightColor>
+<DownColor>16777215</DownColor>
+<DisabledColor>16777215</DisabledColor>
+<FontData>
+<FontName>Verdana</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-20</Height>
+<Weight>700</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<CapXOff>0</CapXOff>
+<CapYOff>0</CapYOff>
+<LeftMargin>0</LeftMargin>
+<RightMargin>0</RightMargin>
+<MouseOverSndMode>1</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>1</MouseClickSndMode>
+<MouseClickSound/>
+</BUTTON>
+</Object>
+<Object>
+<Type>3</Type>
+<Name>Image1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>101</Top>
+<Bottom>351</Bottom>
+<Left>605</Left>
+<Right>982</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>97</DesignCodeLine>
+<DesignCodeCol>3678319</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5857125</DesignCodeLine>
+<DesignCodeCol>1082346496</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>3678319</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5857125</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<NormalImage>
+<Filename>AutoPlay\Images\Screenshot 2025-04-07 164606.png</Filename>
+<UseTransColor>0</UseTransColor>
+<TransClr>16777215</TransClr>
+<TransTolerance>10</TransTolerance>
+<Opacity>100</Opacity>
+<HTMode>0</HTMode>
+</NormalImage>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<Object>
+<Type>2</Type>
+<Name>Paragraph1</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>100</Top>
+<Bottom>609</Bottom>
+<Left>80</Left>
+<Right>584</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5832704</DesignCodeLine>
+<DesignCodeCol>100</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1634689648</DesignCodeLine>
+<DesignCodeCol>25714</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>909196613</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1918988130</DesignCodeLine>
+<DesignCodeCol>1082523748</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Text>
+<Body>La Edad Media, y en particular el Siglo de Oro islámico (aproximadamente siglos VIII-XIV), representa un punto de inflexión crucial en la historia de la criptología. Impulsados por un floreciente ambiente intelectual y avances significativos en matemáticas, lingüística y administración, los eruditos árabes no solo preservaron el conocimiento clásico, sino que realizaron contribuciones originales que transformaron el campo.
+
+Al-Kindi: El Pionero del Criptoanálisis Sistemático (Siglo IX):
+La figura central de este período es, sin duda, Abu Yusuf Ya'qub ibn Ishaq al-Sabbah al-Kindi (Al-Kindi), un polímata cuyas contribuciones le valieron ser considerado uno de los padres fundadores de la criptología moderna. Su logro más trascendental fue la invención (o al menos la primera descripción sistemática) del análisis de frecuencia.
+
+Esta técnica revolucionaria de criptoanálisis se basaba en la observación de que, en cualquier idioma, las letras tienen frecuencias de aparición características (por ejemplo, la 'E' es muy común en español e inglés, mientras que la 'W' o 'K' son raras en español). Al analizar la frecuencia de los símbolos en un mensaje cifrado con un método de sustitución monoalfabética (como el Cifrado César, cuya debilidad intrínseca ya se mencionó), se podía inferir qué letra del texto cifrado correspondía a qué letra del texto original.
+Al-Kindi no solo aplicó esta técnica, sino que la describió meticulosamente en su tratado "Manuscrito sobre el descifrado de mensajes criptográficos" (Risala fi Istikhraj al-Mu?amma), que se considera el primer libro dedicado explícitamente al criptoanálisis.
+Además, en obras como su "Libro de mensajes criptográficos", Al-Kindi aplicó por primera vez conceptos matemáticos y estadísticos, como permutaciones y combinaciones, al estudio del lenguaje y los cifrados, sentando una base teórica y metodológica sin precedentes para la criptología.
+Otras Contribuciones Árabes Relevantes:
+Aunque Al-Kindi fue pionero, otros eruditos también jugaron un papel importante:
+
+Al-Khalil ibn Ahmad al-Farahidi (Siglo VIII): Antes de Al-Kindi, este lingüista y lexicógrafo exploró el uso de permutaciones y combinaciones en el análisis de la poesía y las palabras árabes, trabajos que sentaron bases conceptuales relevantes para la criptología posterior.
+Al-Qalqashandi (Siglos XIV-XV): En su monumental enciclopedia administrativa "Subh al-a 'sha fi sina'at al-insha", Al-Qalqashandi incluyó una sección detallada que representa una síntesis magistral del conocimiento criptológico de la época. Describió diversos sistemas de cifrado (sustitución y transposición) y ofreció instrucciones claras y prácticas sobre el criptoanálisis, especialmente el análisis de frecuencia, basándose en gran medida en el trabajo de Al-Kindi y otros predecesores. Su obra fue fundamental para preservar y difundir este conocimiento.
+Impacto y Legado:
+
+El desarrollo del análisis de frecuencia por los eruditos árabes fue un avance demoledor. Demostró de manera concluyente la vulnerabilidad inherente de todos los cifrados de sustitución monoalfabética que habían sido el pilar de la escritura secreta durante siglos, incluyendo los métodos griegos y romanos. Este descubrimiento no solo resolvió el problema de cómo leer mensajes cifrados con estas técnicas, sino que también impulsó urgentemente la necesidad de crear métodos de cifrado más robustos y complejos. Así, el trabajo criptoanalítico árabe preparó directamente el terreno para la siguiente gran innovación en la historia de la criptografía: el desarrollo de los cifrados polialfabéticos en el Renacimiento europeo, marcando un salto cualitativo respecto a las prácticas de la antigüedad.</Body>
+<NormalColor>0</NormalColor>
+<HighlightColor>0</HighlightColor>
+<MouseDownColor>0</MouseDownColor>
+<DisabledColor>12632256</DisabledColor>
+<BorderColor>0</BorderColor>
+<BackColor>16777215</BackColor>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-16</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+<Alignment>0</Alignment>
+<TransBG>1</TransBG>
+<VSMode>0</VSMode>
+<HSMode>2</HSMode>
+<SBStyle>0</SBStyle>
+<SBSkin/>
+<Border>0</Border>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Text>
+</Object>
+<Object>
+<Type>3</Type>
+<Name>Image2</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>1</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>370</Top>
+<Bottom>613</Bottom>
+<Left>607</Left>
+<Right>975</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1081485312</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Right-Click</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>5857125</DesignCodeLine>
+<DesignCodeCol>1082407936</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Enter</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>97</DesignCodeLine>
+<DesignCodeCol>281</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Leave</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>1081485312</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<NormalImage>
+<Filename>AutoPlay\Images\Screenshot 2025-04-07 164723.png</Filename>
+<UseTransColor>0</UseTransColor>
+<TransClr>16777215</TransClr>
+<TransTolerance>10</TransTolerance>
+<Opacity>100</Opacity>
+<HTMode>0</HTMode>
+</NormalImage>
+<MouseOverSndMode>0</MouseOverSndMode>
+<MouseOverSound/>
+<MouseClickSndMode>0</MouseClickSndMode>
+<MouseClickSound/>
+</Object>
+<HGuidelines/>
+<VGuidelines>
+<Guideline>
+<pt>713</pt>
+<locked>0</locked>
+</Guideline>
+</VGuidelines>
+</Page>
+<Page>
+<Name>Intro_QueEsCripto</Name>
+<InheritObs/>
+<InheritBG/>
+<Description/>
+<Keywords/>
+<Background>
+<Type>0</Type>
+<ImageStyle>0</ImageStyle>
+<TopColor>16711680</TopColor>
+<BottomColor>13433342</BottomColor>
+<UseCustomBackgroundSettings>1</UseCustomBackgroundSettings>
+<TransitionEffect/>
+<TransProps/>
+<NormalImage>
+<Filename/>
+</NormalImage>
+</Background>
+<Event>
+<Name>On Preload</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>11776</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Show</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1632793699</DesignCodeLine>
+<DesignCodeCol>7301492</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Close</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1230262853</DesignCodeLine>
+<DesignCodeCol>17747</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Timer</Name>
+<Args>number e_ID</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>3158064</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Audio</Name>
+<Args>number e_Channel, string e_State</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Size</Name>
+<Args>number e_WindowWidth, number e_WindowHeight, number e_PageWidth, number e_PageHeight, number e_Type</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>3158064</DesignCodeLine>
+<DesignCodeCol>3043941</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Menu</Name>
+<Args>number e_ID, table e_ItemInfo</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1828744960</DesignCodeLine>
+<DesignCodeCol>46</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>1632793699</DesignCodeLine>
+<DesignCodeCol>7301492</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Button</Name>
+<Args>number e_Type, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>12851</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Move</Name>
+<Args>number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>3158845</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Mouse Wheel</Name>
+<Args>table e_Flags, number e_Delta, number e_X, number e_Y</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Object>
+<Type>12</Type>
+<Name>MiArbol</Name>
+<VisibleAtDesignTime>1</VisibleAtDesignTime>
+<VisibleAtRunTime>1</VisibleAtRunTime>
+<Locked>0</Locked>
+<Enabled>1</Enabled>
+<ToolTip/>
+<Cursor>0</Cursor>
+<Group>0</Group>
+<MaintainAspectRatio>0</MaintainAspectRatio>
+<Pin>0</Pin>
+<TabIndex>-1</TabIndex>
+<AutoResize>0</AutoResize>
+<Coordinates>
+<Top>0</Top>
+<Bottom>750</Bottom>
+<Left>0</Left>
+<Right>225</Right>
+</Coordinates>
+<Ratios>
+<WidthRatio>-1.000000</WidthRatio>
+<HeightRatio>-1.000000</HeightRatio>
+</Ratios>
+<Event>
+<Name>On Select</Name>
+<Args>string e_NodeIndex</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Double-Click</Name>
+<Args>string e_NodeIndex</Args>
+<Script>SetJump()</Script>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>9</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Key</Name>
+<Args>number e_Key, table e_Modifiers</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Focus</Name>
+<Args/>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On EditLabel</Name>
+<Args>string e_NodeIndex, string e_NewText, string e_OldText</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Check</Name>
+<Args>string e_NodeIndex, boolean e_Checked</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Event>
+<Name>On Expanded</Name>
+<Args>string e_NodeIndex, boolean e_Expanded</Args>
+<Script/>
+<TreeStates>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+<TreeState>0</TreeState>
+</TreeStates>
+<DesignCodeLine>0</DesignCodeLine>
+<DesignCodeCol>0</DesignCodeCol>
+<BookMarks count="0">
+</BookMarks>
+</Event>
+<Actions/>
+<Options>
+<ImageList/>
+<BackgroundColor format="hex">fef9cc</BackgroundColor>
+<TextColor format="hex">000000</TextColor>
+<TransparentImageListColor format="hex">ffffff</TransparentImageListColor>
+<ShowCheckBoxes>0</ShowCheckBoxes>
+<HasLines>1</HasLines>
+<LinesAtRoot>1</LinesAtRoot>
+<HasButtons>1</HasButtons>
+<EditLabels>0</EditLabels>
+<AlwaysShowSelection>1</AlwaysShowSelection>
+<UseImageList>0</UseImageList>
+<ReadOrder>0</ReadOrder>
+<Indent>0</Indent>
+<BorderMode>2</BorderMode>
+</Options>
+<Tree>
+<TreeRootCreated>1</TreeRootCreated>
+<tree_node>
+<AMSTreeData>
+<Text>Introducción a la Criptografía</Text>
+<Data>Data for Item 1</Data>
+<Selected>0</Selected>
+<Expanded>1</Expanded>
+<NodeIndex>1</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_children>
+<tree_node>
+<AMSTreeData>
+<Text>¿Qué es la criptografía? (Confidencialidad, Integridad, Autenticación)</Text>
+<Data>Data for Sub Item 1</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>1.1</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>Conceptos básicos: Texto plano, Cifrado, Texto cifrado, Descifrado, Clave</Text>
+<Data>Data for Sub Item 2</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>1.2</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>Criptografía vs. Esteganografía</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>1.3</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>Línea de tiempo interactiva de la Criptografía</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>1.4</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>La importancia de la criptografía a lo largo de la historia</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>1.5</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>0</node_sibling>
+</tree_node>
+</node_children>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>Criptografía Antigua (Hasta ~500 d.C.)</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>2</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_children>
+<tree_node>
+<AMSTreeData>
+<Text>Criptografía en Mesopotamia y Egipto</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>2.1</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>La Escítala Espartana</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>2.2</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>Cifrados de la Antigua Grecia: El Cuadrado de Polibio</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>2.3</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>Cifrados Hebreos: El Cifrado Atbash</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>2.4</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>El Cifrado César</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>2.5</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_children>
+<tree_node>
+<AMSTreeData>
+<Text>Funcionamiento y ejemplo práctico</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>2.5.1</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>Debilidades y método de ataque</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>2.5.2</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>0</node_sibling>
+</tree_node>
+</node_children>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>Esteganografía Antigua: De Histieo a los huevos de Ovidio</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>2.6</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>El Kamasutra y sus cifrados para amantes</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>2.7</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>0</node_sibling>
+</tree_node>
+</node_children>
+<node_sibling>1</node_sibling>
+</tree_node>
+<tree_node>
+<AMSTreeData>
+<Text>Criptografía Medieval y Renacentista</Text>
+<Data>New Data</Data>
+<Selected>0</Selected>
+<Expanded>0</Expanded>
+<NodeIndex>3</NodeIndex>
+<ImageIndex>-1</ImageIndex>
+<SelectedImageIndex>-1</SelectedImageIndex>
+<Checked>0</Checked>
+</AMSTreeData>
+<node_sibling>0</node_sibling>
+</tree_node>
+</Tree>
+<Font>
+<FontData>
+<FontName>Segoe UI</FontName>
+<CharacterSet>0</CharacterSet>
+<Height>-12</Height>
+<Weight>400</Weight>
+<Italic>0</Italic>
+<Underline>0</Underline>
+<StrikeOut>0</StrikeOut>
+<AntiAlias>1</AntiAlias>
+</FontData>
+</Font>
+</Object>
+<HGuidelines/>
+<VGuidelines/>
+</Page>
+<SugDialogs/>
+<MissingTechs>
+<DlgTitle>Missing Technologies</DlgTitle>
+<DlgMsg>This program requires the following technologies which cannot be located on your system.
+
+Please double-click on each item to find out how to install it.</DlgMsg>
+<BtnAbort>Abort</BtnAbort>
+<BtnCancel>Continue</BtnCancel>
+<BtnHelp>Help</BtnHelp>
+<ShowHelpBtn>0</ShowHelpBtn>
+<HelpURL>http://www.yourdomain.com/help.htm</HelpURL>
+</MissingTechs>
+<ProgramPrefs>
+<OutputFolder/>
+<EXEName>autorun.exe</EXEName>
+<EnableAutoPlayFeatureBTF>1</EnableAutoPlayFeatureBTF>
+<EnableAutoPlayFeatureCDRW>1</EnableAutoPlayFeatureCDRW>
+<EnableAutoPlayFeatureISO>1</EnableAutoPlayFeatureISO>
+<EnableAutoPlayFeatureSFX>0</EnableAutoPlayFeatureSFX>
+<TimeStampFilesBTF>0</TimeStampFilesBTF>
+<TimeStampFilesCDRW>0</TimeStampFilesCDRW>
+<TimeStampFilesISO>0</TimeStampFilesISO>
+<ISOImageFile/>
+<SelfExtractingZIPfile/>
+<ZIPMessage>Loading</ZIPMessage>
+<ZIPShowProgress>1</ZIPShowProgress>
+<CDVolumeIdentifier>NEWDISC</CDVolumeIdentifier>
+<CacheFileData>1</CacheFileData>
+<UseBurnProof>1</UseBurnProof>
+<BuildType>0</BuildType>
+<DriveLetter/>
+<UsePassword>0</UsePassword>
+<OpenFolder>1</OpenFolder>
+<ObscureFilenames>0</ObscureFilenames>
+<ObscureDataFolder>AutoPlay</ObscureDataFolder>
+</ProgramPrefs>
+</DocumentData>
