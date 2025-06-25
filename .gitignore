@@ -1,0 +1,26 @@
+# Archivos generados por AutoPlay Media Studio
+*.ap$
+*.bak
+*.~ap
+
+# Carpetas de compilación o publicación
+Build/
+Output/
+Deploy/
+
+# Archivos temporales del sistema o de respaldo
+*.tmp
+*.log
+*.swp
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración del entorno local
+*.suo
+*.user
+*.ncb
+*.vcproj.*.user
+
+# Backups automáticos
+*.autosave
+*.old
